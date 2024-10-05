@@ -1,0 +1,32 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: uptime-kuma
+
+commonAnnotations:
+  repo: https://github.com/charlesthomas/homelab-uptime-kuma
+commonLabels:
+  app: uptime-kuma
+
+resources:
+- resources/deployments.yaml
+- resources/ingresses.yaml
+- resources/namespaces.yaml
+- resources/services.yaml
+patches:
+- patch: |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: uptime-kuma
+      namespace: uptime-kuma
+      annotations:
+        gethomepage.dev/href: https://down.crt.house
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/description: Down Detector
+        gethomepage.dev/group: Kubernetes
+        gethomepage.dev/icon: uptime-kuma
+        gethomepage.dev/name: Uptime Kuma
+        gethomepage.dev/pod-selector: ""
+  target:
+    kind: Ingress

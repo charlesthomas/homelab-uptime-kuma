@@ -1,0 +1,26 @@
+_commit: v1.12.1-4-g3565bdb
+_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+additionalResources: ''
+backups: false
+helm: false
+homepageDescription: Down Detector
+homepageEnabled: true
+homepageGroup: Kubernetes
+homepageIcon: uptime-kuma
+homepageName: Uptime Kuma
+ingHost: down.crt.house
+ingName: uptime-kuma
+ingress: false
+labels: 'app: uptime-kuma'
+name: uptime-kuma
+namespace: uptime-kuma
+pvc: false
+reloader: false
+resources:
+- deployments.yaml
+- ingresses.yaml
+- services.yaml
+service: false
+serviceAccount: false
+upstreamURL: https://uptime.kuma.pet/
+url: https://github.com/charlesthomas/homelab-uptime-kuma
