@@ -1,4 +1,4 @@
-_commit: v1.12.1-4-g3565bdb
+_commit: v1.12.1-5-ga130565
 _src_path: /Users/crthomas/code/charlesthomas/homelab-template
 additionalResources: ''
 backups: false
@@ -14,7 +14,11 @@ ingress: false
 labels: 'app: uptime-kuma'
 name: uptime-kuma
 namespace: uptime-kuma
-pvc: false
+pvc: true
+pvcAccessMode: ReadWriteMany
+pvcName: uptime-kuma
+pvcSize: 4Gi
+pvcStorageClass: longhorn
 reloader: false
 resources:
 - deployments.yaml
