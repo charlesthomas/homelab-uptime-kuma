@@ -38,3 +38,6 @@ spec:
                 name: uptime-kuma
                 port:
                   number: 3001
+  tls:
+    - hosts:
+      - down.crt.house
