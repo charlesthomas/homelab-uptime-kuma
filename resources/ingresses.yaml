@@ -8,6 +8,7 @@ metadata:
     app.kubernetes.io/instance: uptime-kuma
     external-dns.alpha.kubernetes.io/hostname: down.crt.house
   annotations:
+    nginx.org/websocket-services: uptime-kuma
     nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
     nginx.ingress.kubernetes.io/server-snippets: |
