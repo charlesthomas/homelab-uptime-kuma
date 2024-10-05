@@ -11,6 +11,7 @@ commonLabels:
 resources:
 - resources/deployments.yaml
 - resources/ingresses.yaml
+- resources/pvcs.yaml
 - resources/namespaces.yaml
 - resources/services.yaml
 patches:
