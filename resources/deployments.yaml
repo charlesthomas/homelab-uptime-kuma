@@ -32,7 +32,7 @@ spec:
         - name: uptime-kuma
           securityContext:
             {}
-          image: "louislam/uptime-kuma:1.23.15-alpine"
+          image: uptime-kuma
           imagePullPolicy: IfNotPresent
           env:
             - name: UPTIME_KUMA_PORT
