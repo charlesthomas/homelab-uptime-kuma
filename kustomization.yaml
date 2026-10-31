@@ -5,8 +5,10 @@ namespace: uptime-kuma
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-uptime-kuma
-commonLabels:
-  app: uptime-kuma
+labels:
+- includeSelectors: true
+  pairs:
+    app: uptime-kuma
 
 images:
   - name: uptime-kuma
